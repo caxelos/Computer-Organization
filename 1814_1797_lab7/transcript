@@ -1,0 +1,6 @@
+# Reading C:/Modeltech_pe_edu_10.3d/tcl/vsim/pref.tcl
+# error: Layout::Clairvoyance can't read "map(ü)": no such element in array
+# can't read "map(ü)": no such element in array
+#     while executing
+# "Layout::Clairvoyance"
+# OpenFile {E:/ü°ìëù©£ó CE232/1814_1797_lab7/cpu.v}

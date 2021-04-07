@@ -1,0 +1,35 @@
+1) meso CPI = (synolikos ari8mos Kyklwn)/(synoliko plh8os entolwn)
+2) ari8mos kyklwn[i] = (kykloi mhxanhs[i])*(plh8hos entolhs [i])...
+
+-(Πληθος διαφορετικων εντολων) = 16
+-Για 100 προγραμματα, ο συνολικος αριθμος κυκλων της καθε εντολης:
+							  ΦΟΡΕΣ
+	- load int - 15fores emfanizetai, ari8mos_kyklwn = 1,4*15 = 21
+	- store int - 2fores, 1kyklos, 4*2 =                2,8
+	- add int   - 23fores, 1kyklos, 23*1 =              23
+	- sub int   - 2fores, 1kyklos, 2*1 =                 2
+	- mul int   - 1fora, 1kyklos, 1*2=                   2
+	- compareFP -2fores, 2kykloi, 2*2=                   4
+	- load immed -5fores, 1,4kykloi, 5*1,4 =             7
+	- brances(taken 70%)
+		 -2,8fores, 2kykloi, 2 * 2,8 =              5,6
+	- brances(not taken 30%)
+		-1,2 fores, 1,5kykloi,  1,2 * 1,5 =         1,8
+	- shift      -1fora,   2kykloi, 1*2 =                2
+	- logical int -3fores, 1kyklos, 1*3 =                3
+	- load FP    - 15fores, 1,5kykloi, 15*1,5 =        22,5
+	- store FP   - 7fores,  1,5kykloi, 7*1,5 =         10,5
+	- add FP     - 7fores,  4kykloi, 7*4 =              28
+	- sub FP     - 3fores,  2kykloi, 3*2 =               6
+	- mulFP      - 8fores, 6kykloi, 8*6 =               48
+	- move FP    - 2fores, 2kykloi, 2*2 =                4 
+-Επομενως, ο συνολικος αριθμος κυκλων ολων των εντολων ειναι το αθροισμα τους
+-Δηλαδη:(synolikos ari8mos kyklwn) = 194,2
+-To πληθος των εντολων ειναι: 100
+
+-Αρα: (meso CPI) = 194,2/100 = 1,942 kykloi/entolh
+
+###################################
+Συχνοτητα = 1GHz, άρα Περιοδος = 1ns
+
+ΑΡΑ: (ΜΕΣΟΣ ΧΡΟΝΟΣ ΕΚΤΕΛΕΣΗΣ) = (ΜΕΣΟ AΡΙΘΜΟΣ ΚΥΚΛΩΝ ΑΝΑ ΕΝΤΟΛΗ) * (ΕΝΤΟΛΕΣ) * (ΠΕΡΙΟΔΟΣ) = 1,942* (10^7) *1ns = 1,942 * 10^(7 - 9) = 0,01942s			      = (ΜΕΣΟ CPI) * (ΕΝΤΟΛΕΣ) * (Τ)                              =	  
